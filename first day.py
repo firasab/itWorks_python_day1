@@ -10,7 +10,7 @@ ask()
 # Ask two users for their names, and then tell them who got the longest name.
 print("write your name's please!")
 def ask():
-    
+
     name1 = input()
     print("nice to meet you ", name1 , "!")
     print("write your name's please!")
@@ -412,5 +412,181 @@ for i in range(0, size):
 #                my_list[i], my_list[minimum] = my_list[minimum], my_list[i]
 # print(my_list) 
 asnwer :
-[2, 12, 24, 233, 254]
+[2, 12, 24, 233, 354]
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# While Loops
+# Exercise (Easy)
+# Write a loop that prompts the user to enter a series of pizza toppings until they enter a ‘quit’ value.
+# As they enter each topping, print a message saying you’ll add that topping to their pizza .
+need = "quit"
+while need != quit :
+    if need == quit :
+        break
+    print("add what you want to ur pizza")
+    need = input()
+    print("we will add" , need , "to your pizza")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Easy)
+# A movie theater charges different ticket prices depending on a person’s age .
+#  If a person is under the age of 3, the ticket is free; if they are between 3 and 12,
+#  the ticket is $10; and if they are over age 12, the ticket is $15 .
+
+# Write a loop in which you ask users their age, and then tell them the cost of their movie ticket .
+need = "notend"
+while need != "end" :
+    print("please enter your age")
+    age = int(input())
+    if age < 3 :
+        print("you can enter for free")
+    elif age >= 3 and age < 12:
+        print("ypu have to pay $10")
+    elif age > 12 :
+        print("you have to pay $15")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Easy)
+# Given a list, use a while loop to print out every elements from the end to the beginning.
+list = [1, 3, 5, 7, 9]
+i = len(list) -1
+while i >= 0:
+    print(list[i])
+    i -= 1
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Easy)
+# Without your computer, guess the output of this piece of code:
+
+# i = 1
+# while True:    
+#   if i == 3: 
+#       break
+#   print(i) 
+#   i + = 1
+answer :
+        it will print 1 , 2 then do break 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Easy)
+# Use a while loop to print every number from 5 to 100
+i = 5
+while i <= 100:
+    print(i)
+    i += 1
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Easy)
+# What is the purpose of this program:
+
+# user_input = input("> ")
+# while user_input != "p4ssw0rd":
+#   print("Access denied.")
+#   user_input = input("> ")
+# print("Access granted!")
+answer :
+        to check if the word that user enter is p4ssw0rd , if it is that then it print Access granted! else it print Access denied.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Easy)
+# What is the problem in this program:
+# user_input = input("Password: ")
+# while user_input != "my_password":
+#   print("Access denied")
+# print("Access granted")
+answer :
+        the user can try just one time , there is no input method in the while loop here
+        we can fix it by adding a input method inside the while loop
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Take the last exercise, and apply it to a family, ask every member of the family their age,
+# and at the end of the loop, tell them the cost of the tickets for the whole family.
+count = 0
+need = "-1"
+while need != -1 :
+    if need == -1 :
+        break
+    print("please enter your age")
+    age = int(input())
+    if age < 3 :
+        print("you can enter for free")
+    elif age >= 3 and age < 12:
+        print("ypu have to pay $10")
+        count += 10
+    elif age > 12 :
+        print("you have to pay $15")
+        count += 15
+print(count)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Given a list, use a while loop to print out every element which his index is even.
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+lenegth = 0
+while lenegth <= len(thislist):
+    print(thislist[lenegth])
+    lenegth += 2
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Exercise (Medium)
+#A group of teenagers is coming to your movie theater and want to see a movie that is restricted for people between 16 and 21 years old.
+#Write a program that ask every user their age, and then tell them which can see the movie.
+#Try to add the allowed ones to a list.
+need = "notend"
+while need != "end" :
+    print("please enter your age")
+    age = int(input())
+    if age < 16 :
+        print("you cant watch the movie , sorry!")
+    elif age >= 16 and age < 21:
+        print("you can watch the movie :D")
+    elif age > 21 :
+        print("you are too old for this movie")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700.
+num = 1500
+while num <= 2700:
+    if num % 5 == 0 and num % 7 == 0:
+        print(num)
+        num += 1
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Count the number of spaces in a string.
+str=input("Enter the string: \n")
+spaces=0
+for i in range(0,len(str)):
+  if(str[i]==' '):
+    spaces=spaces+1
+print("The number of spaces are: ",spaces)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Count the number of words in a string.
+test_string = "my name is firas aby sneneh"
+print ("The original string is : " +  test_string) 
+res = len(test_string.split()) 
+print ("The number of words in string are : " +  str(res)) 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Write a program that calculate the number of upper case letters and lower case letters in a string.
+def string_test(s):
+    d={"UPPER_CASE":0, "LOWER_CASE":0}
+    for c in s:
+        if c.isupper():
+           d["UPPER_CASE"]+=1
+        elif c.islower():
+           d["LOWER_CASE"]+=1
+        else:
+           pass
+    print ("Original String : ", s)
+    print ("Number of Upper case characters : ", d["UPPER_CASE"])
+    print ("Number of Lower case Characters : ", d["LOWER_CASE"])
+
+string_test('My Name Is Firas')
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Exercise (Medium)
+# Without your computer, guess the output of this program:
+# index = 0
+# my_list = [321, 312, 123, 434, 1235]
+# while index < len(my_list):
+#   s = str(my_list[index])
+#  print(s[-1])
+#   index += 1
+answer :
+1
+2
+3
+4
+5
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
