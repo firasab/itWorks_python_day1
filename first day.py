@@ -10,6 +10,7 @@ ask()
 # Ask two users for their names, and then tell them who got the longest name.
 print("write your name's please!")
 def ask():
+    
     name1 = input()
     print("nice to meet you ", name1 , "!")
     print("write your name's please!")
